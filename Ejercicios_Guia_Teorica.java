@@ -7,18 +7,19 @@ package holamundo;
 
 import java.util.Scanner;
 
-
-/**
- * Implementar un programa que le pida dos números enteros al usuario y
-determine si ambos o alguno de ellos es mayor a 25.
- */
-
 /**
  *
  * @author sofimai
  */
 public class Ejercicios_Guia_Teorica {
     public static void main(String[] args){
+ /**
+ * Ejercicio 6 
+Implementar un programa que le pida dos números enteros al usuario y
+determine si ambos o alguno de ellos es mayor a 25.
+ */
+        
+        
         Scanner leer = new Scanner(System.in);
         
        // System.out.println("Ingresar el primer numero");
@@ -72,22 +73,81 @@ o Si no se cumple ninguno de los valores anteriores mostrar el mensaje
             System.out.println("No existe un valor valido para el tipo de bomba ingresado");
         }*/
         
-   /**
-    * Ejercicio 8
+   /** Ejercicio 8
 Escriba un programa que valide si una nota está entre 0 y 10, sino está entre 0
 y 10 la nota se pedirá de nuevo hasta que la nota sea correcta.
-11*/
+11
     
-        System.out.println("Ingrese una nota que se encuentre entre el 0 y el 10");
-        int nota = leer.nextInt();
-        if (nota>=0 && nota <=10){
-            System.out.println("La nota ingresada es: " + nota); 
+        
+       System.out.println("Escriba una nota");
+        float nota = leer.nextFloat(); 
+        
+        while (nota>10 || nota<0) {
+            System.out.println("La nota ingresada debe estar entre 0 y 10");
+            System.out.println("Vuelva a ingresar la nota");
+            nota = leer.nextFloat();
         }
-        while (nota<=0 || nota>=10){
-            System.out.println("La nota no es valida, ingrese una nota nuevamente");
-            break;
+        
+        System.out.println("La nota ingresada es: " + nota);
+        */
+   
+ /**
+  Ejercicio 9
+Escriba un programa que lea 20 números. Si el número leído es igual a cero se
+debe salir del bucle y mostrar el mensaje "Se capturó el numero cero". El
+programa deberá calcular y mostrar el resultado de la suma de los números
+leídos, pero si el número es negativo no debe sumarse. Nota: recordar el uso
+de la sentencia break.
+ Usar DO-WHILE
+   
+
+ int contador = 0;
+ int num = 0;
+ int total = 0;
+ 
+ do {
+     System.out.println("Ingrese un numero");
+     num = leer.nextInt();
+     contador = contador + 1;
+     if (num>0 || contador <20) {
+     total = total + num; 
+     }
+    } while ((num > 0 || num < 0) && contador <= 20);
+ 
+ if (num >= 0 && num <= 0){
+     System.out.println("Se capturo el numero cero");
+    }
+ 
+ 
+    System.out.println("El total de los numeros ingresados es:" + total);
+**/
+    
+ /**
+  * Ejercicio 10
+Realizar un programa que lea 4 números (comprendidos entre 1 y 20) e imprima
+el número ingresado seguido de tantos asteriscos como indique su valor. Por
+ejemplo:
+5 *****
+3 ***
+11 ***********
+2 **
+  */   
+ 
+   int num = 0 ;    
+ 
+        for (int i = 1; i < 20; i++) {
+            System.out.println("Ingrese un numero");
+            num = leer.nextInt();
+            System.out.print(num);
+            for (int j = 0; j < num; j++) {
+                System.out.print("*");
+                System.out.print(" ");
+            }
+            System.out.println(" ");
         }
-}
+ 
+ 
+    }   
 }
     
 
