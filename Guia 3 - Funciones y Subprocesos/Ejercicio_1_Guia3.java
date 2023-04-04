@@ -32,20 +32,22 @@ public class Ejercicio_1_Guia3 {
         
             case 1:    
         System.out.println("1. Sumar");
-        //double resultadosuma = Sumar(num1, num2); // dividir por 1 para que no muestre decimales??   
+        //double resultadosuma = Sumar(num1, num2); //  
         int resultadosuma = (int) Sumar(num1, num2);
         System.out.println("El resultado de la suma es: " + resultadosuma);
             break;
         
             case 2:
         System.out.println("2. Restar");
-        double resultadoresta = Restar(num1, num2);
+        //double resultadoresta = Restar(num1, num2);
+        int resultadoresta = (int) Restar(num1, num2);
         System.out.println("El resultado de la resta es de: " + resultadoresta);
             break;
         
             case 3:
         System.out.println("3. Multiplicar");
-        double resultadomult = Multiplicar(num1, num2);
+        //double resultadomult = Multiplicar(num1, num2);
+        int resultadomult = (int) Multiplicar(num1, num2);
         System.out.println("El resultado de la multiplicacion es de: " + resultadomult);
             break;
             
